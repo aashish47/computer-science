@@ -1,19 +1,10 @@
 def merge(a: list[int], start, mid, end):
-    leftSize = mid - start + 1
-    rightSize = end - mid
-
-    left = []
-    right = []
-
-    for i in range(leftSize):
-        left.append(a[start + i])
-    for j in range(rightSize):
-        right.append(a[mid + 1 + j])
-
-    i = 0
-    j = 0
+    left = a[start : mid + 1]
+    right = a[mid + 1 : end + 1]
+    i = j = 0
     k = start
-    while i < leftSize and j < rightSize:
+
+    while i < len(left) and j < len(right):
         if left[i] < right[j]:
             a[k] = left[i]
             i += 1
@@ -21,12 +12,13 @@ def merge(a: list[int], start, mid, end):
             a[k] = right[j]
             j += 1
         k += 1
-    while i < leftSize:
+
+    while i < len(left):
         a[k] = left[i]
         k += 1
         i += 1
 
-    while j < rightSize:
+    while j < len(right):
         a[k] = right[j]
         k += 1
         j += 1
@@ -38,7 +30,6 @@ def merge_sort(a: list[int], start, end):
     mid = (start + end) // 2
     merge_sort(a, start, mid)
     merge_sort(a, mid + 1, end)
-
     merge(a, start, mid, end)
 
 

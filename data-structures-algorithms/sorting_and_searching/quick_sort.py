@@ -2,21 +2,17 @@ def quick_sort(a: list[int], left, right):
     if left < right:
         index = partition(a, left, right)
         quick_sort(a, left, index - 1)
-        quick_sort(a, index, right)
+        quick_sort(a, index + 1, right)
 
 
 def partition(a: list[int], left, right):
-    pivot = a[(left + right) // 2]
-    while left <= right:
-        while a[left] < pivot:
-            left += 1
-        while a[right] > pivot:
-            right -= 1
-        if left <= right:
-            a[left], a[right] = a[right], a[left]
-            left += 1
-            right -= 1
-    return left
+    small = left
+    for i in range(left, right):
+        if a[i] <= a[right]:
+            a[i], a[small] = a[small], a[i]
+            small += 1
+    a[small], a[right] = a[right], a[small]
+    return small
 
 
 # def quick_sort(a: list[int]):
