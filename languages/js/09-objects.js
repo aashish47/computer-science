@@ -11,5 +11,7 @@ function Person(name, age) {
 }
 
 person2 = new Person("agarwal", 29);
-
 console.log(person2);
+
+const { name, age } = person2;
+console.log(name, age);

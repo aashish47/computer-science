@@ -9,3 +9,5 @@ console.log(nums.splice(1, 3, -1, -2, -3));
 console.log(nums);
 
 console.log(nums.slice(1, 4));
+
+console.log([0, 0, ...nums]);
