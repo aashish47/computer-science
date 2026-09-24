@@ -1,0 +1,1 @@
+F:\project\computer-science\languages\rust\03-common-programming-concepts\01-variables-mutability\target\debug\variables-mutability.exe: F:\project\computer-science\languages\rust\03-common-programming-concepts\01-variables-mutability\src\main.rs

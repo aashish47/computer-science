@@ -1,0 +1,1 @@
+F:\project\computer-science\languages\rust\03-common-programming-concepts\02-data-types\target\debug\data-types.exe: F:\project\computer-science\languages\rust\03-common-programming-concepts\02-data-types\src\main.rs
