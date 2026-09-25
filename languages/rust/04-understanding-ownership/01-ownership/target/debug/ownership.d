@@ -1,0 +1,1 @@
+F:\project\computer-science\languages\rust\04-understanding-ownership\01-ownership\target\debug\ownership.exe: F:\project\computer-science\languages\rust\04-understanding-ownership\01-ownership\src\main.rs
